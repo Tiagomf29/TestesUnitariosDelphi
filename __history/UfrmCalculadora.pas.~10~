@@ -1,0 +1,115 @@
+unit UfrmCalculadora;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+
+  TOperacoes = (toNone, toAdicao, toSubtracao, toMultiplicacao, toDivisao);
+
+  TfrmCalculadora = class(TForm)
+    edtValor1: TEdit;
+    edtValor2: TEdit;
+    edtResultado: TEdit;
+    btnSoma: TButton;
+    btnSubtracao: TButton;
+    btnDivisao: TButton;
+    btnMultiplicacao: TButton;
+    btnCalcular: TButton;
+    lblFuncaoAcionada: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    procedure btnSomaClick(Sender: TObject);
+    procedure btnSubtracaoClick(Sender: TObject);
+    procedure btnDivisaoClick(Sender: TObject);
+    procedure btnMultiplicacaoClick(Sender: TObject);
+    procedure btnCalcularClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    FOperacao : TOperacoes;
+    procedure validacaoBeforeGravacao();
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCalculadora: TfrmCalculadora;
+
+implementation
+uses
+  UFuncaoCalculadora;
+
+{$R *.dfm}
+
+procedure TfrmCalculadora.btnCalcularClick(Sender: TObject);
+begin
+  validacaoBeforeGravacao();
+  try
+    case FOperacao of
+      toAdicao        : edtResultado.Text := TFuncaoCalculadora.soma(StrToFloat(edtValor1.Text),StrToFloat(edtValor2.Text));
+      toSubtracao     : edtResultado.Text := TFuncaoCalculadora.subtrair(StrToFloat(edtValor1.Text),StrToFloat(edtValor2.Text));
+      toMultiplicacao : edtResultado.Text := TFuncaoCalculadora.multiplicar(StrToFloat(edtValor1.Text),StrToFloat(edtValor2.Text));
+      toDivisao       : edtResultado.Text := TFuncaoCalculadora.dividir(StrToFloat(edtValor1.Text),StrToFloat(edtValor2.Text));
+    end;
+  except on e:Exception do
+    begin
+      ShowMessage('Erro de conversão de valores. Verifique!');
+    end;
+  end;
+end;
+
+procedure TfrmCalculadora.btnDivisaoClick(Sender: TObject);
+begin
+  FOperacao := toDivisao;
+  lblFuncaoAcionada.Caption := 'Operação de divisão';
+end;
+
+procedure TfrmCalculadora.btnMultiplicacaoClick(Sender: TObject);
+begin
+  FOperacao := toMultiplicacao;
+  lblFuncaoAcionada.Caption := 'Operação de multiplicação';
+end;
+
+procedure TfrmCalculadora.btnSomaClick(Sender: TObject);
+begin
+  FOperacao := toAdicao;
+  lblFuncaoAcionada.Caption := 'Operação de soma';
+end;
+
+procedure TfrmCalculadora.btnSubtracaoClick(Sender: TObject);
+begin
+  FOperacao := toSubtracao;
+  lblFuncaoAcionada.Caption := 'Operação de subtração';
+end;
+
+procedure TfrmCalculadora.FormShow(Sender: TObject);
+begin
+  FOperacao := toNone;
+end;
+
+procedure TfrmCalculadora.validacaoBeforeGravacao;
+begin
+  if edtValor1.Text = '' then
+  begin
+    ShowMessage('Valor 1 não informado');
+    edtValor1.SetFocus;
+    Abort;
+  end;
+  if edtValor2.Text = '' then
+  begin
+    ShowMessage('Valor 2 não informado');
+    edtValor2.SetFocus;
+    Abort;
+  end;
+  if FOperacao = toNone then
+  begin
+    ShowMessage('Informe a operação');
+    Abort;
+  end;
+end;
+
+end.

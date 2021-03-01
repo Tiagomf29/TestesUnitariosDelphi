@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/02/24 22:53:17.000.901,=C:\Users\Tiago\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/25 23:50:41.000.444,=C:\Users\Tiago\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/28 20:07:29.000.827,=C:\Users\Tiago\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/28 20:10:12.000.148,D:\Projetos GitHub\TestesUnitariosDelphi\UfrmCalculadora.pas=C:\Users\Tiago\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/28 20:10:12.000.148,D:\Projetos GitHub\TestesUnitariosDelphi\UfrmCalculadora.dfm=C:\Users\Tiago\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/02/28 20:10:26.000.658,D:\Projetos GitHub\TestesUnitariosDelphi\Principal.dproj=C:\Users\Tiago\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/02/28 20:12:39.000.834,=D:\Projetos GitHub\TestesUnitariosDelphi\Unit1.pas</Transaction>
+    <Transaction>2021/02/28 20:13:38.000.013,D:\Projetos GitHub\TestesUnitariosDelphi\UFuncaoCalculadora.pas=D:\Projetos GitHub\TestesUnitariosDelphi\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

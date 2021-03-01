@@ -1,0 +1,42 @@
+unit UFuncaoCalculadora;
+
+interface
+
+type
+
+  TFuncaoCalculadora = class
+
+  private
+
+  public
+    class function soma(valor1, valor2: Double): Double;
+    class function subtrair(valor1, valor2: Double): Double;
+    class function dividir(valor1, valor2:Double): Double;
+    class function multiplicar(valor1, valor2: Double): Double;
+  end;
+
+implementation
+
+{ TFuncaoCalculadora }
+
+class function TFuncaoCalculadora.dividir(valor1, valor2: Double): Double;
+begin
+  Result := valor1 / valor2;
+end;
+
+class function TFuncaoCalculadora.multiplicar(valor1, valor2: Double): double;
+begin
+  Result := valor1 * valor2;
+end;
+
+class function TFuncaoCalculadora.soma(valor1, valor2: Double): double;
+begin
+  Result := valor1 + valor2;
+end;
+
+class function TFuncaoCalculadora.subtrair(valor1, valor2: Double): double;
+begin
+  Result := valor1 - valor2;
+end;
+
+end.
