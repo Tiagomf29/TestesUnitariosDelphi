@@ -4,7 +4,7 @@
     <Transaction>2021/02/24 22:53:17.000.901,=C:\Users\Tiago\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2021/02/25 23:50:41.000.444,=C:\Users\Tiago\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2021/02/28 20:23:20.000.608,=C:\Users\Tiago\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021/02/28 20:23:46.000.956,D:\Projetos GitHub\TestesUnitariosDelphi\UTestesCalculadora.pas=C:\Users\Tiago\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021/02/28 20:23:58.000.895,D:\Projetos GitHub\TestesUnitariosDelphi\PTestesCalculadora.dproj=C:\Users\Tiago\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/02/28 20:23:46.000.956,C:\Users\Tiago\Documents\RAD Studio\Projects\Unit1.pas=D:\Projetos GitHub\TestesUnitariosDelphi\UTestesCalculadora.pas</Transaction>
+    <Transaction>2021/02/28 20:23:58.000.895,C:\Users\Tiago\Documents\RAD Studio\Projects\Project1.dproj=D:\Projetos GitHub\TestesUnitariosDelphi\PTestesCalculadora.dproj</Transaction>
   </Transactions>
 </BorlandProject>
